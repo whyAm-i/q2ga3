@@ -2,9 +2,13 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import base64
+import os
 from openai import OpenAI
 
-client = OpenAI(api_key="eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjI0ZjIwMDczNzFAZHMuc3R1ZHkuaWl0bS5hYy5pbiIsImlhdCI6MTc4Mzc3ODk3NSwiaXNzIjoiaHR0cHM6Ly9haXBpcGUub3JnIiwiYXVkIjoiYWlwaXBlLWFwaSIsImV4cCI6MTc4NDM4Mzc3NX0.VtaofHmHiVjZM5nW698OY-qanIgeiIivnKTz72el8Sg")
+client = OpenAI(
+    api_key=os.getenv("AIPIPE_TOKEN"),
+    base_url="https://aipipe.org/openai/v1"
+)
 
 app = FastAPI()
 
