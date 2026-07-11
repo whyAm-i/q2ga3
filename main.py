@@ -29,7 +29,7 @@ def answer(req: Request):
     image_url = f"data:image/png;base64,{req.image_base64}"
 
     response = client.chat.completions.create(
-    model="openai/gpt-4.1-nano",
+    model="gpt-4o-mini",
         messages=[
             {
                 "role": "system",
