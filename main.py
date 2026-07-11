@@ -4,7 +4,7 @@ from pydantic import BaseModel
 import base64
 from openai import OpenAI
 
-client = OpenAI(api_key="YOUR_API_KEY")
+client = OpenAI(api_key="eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjI0ZjIwMDczNzFAZHMuc3R1ZHkuaWl0bS5hYy5pbiIsImlhdCI6MTc4Mzc3ODk3NSwiaXNzIjoiaHR0cHM6Ly9haXBpcGUub3JnIiwiYXVkIjoiYWlwaXBlLWFwaSIsImV4cCI6MTc4NDM4Mzc3NX0.VtaofHmHiVjZM5nW698OY-qanIgeiIivnKTz72el8Sg")
 
 app = FastAPI()
 
