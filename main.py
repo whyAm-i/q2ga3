@@ -23,8 +23,8 @@ class Request(BaseModel):
     image_base64: str
     question: str
 
-@app.post("/extract")
-def extract(req: Request):
+@app.post("/answer-image")
+def answer(req: Request):
 
     image_url = f"data:image/png;base64,{req.image_base64}"
 
